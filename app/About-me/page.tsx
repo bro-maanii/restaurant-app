@@ -17,14 +17,14 @@ export default function page() {
       <h1 className="text-2xl sm:text-5xl font-bold py-10">About Me</h1>
       <div className="text-center md:w-[500px]"> 
       <p className="text-lg sm:text-xl font-bold">
-        I'm Eman Ali Abbasi from Karachi, also known as the City of Light. A
+        I&apos;m Eman Ali Abbasi from Karachi&lsquo; also known as the City of Light. A
         passionate Software Engineering student at the University of Karachi
-        -UBIT, I thrive on challenges across diverse domains.
+        -UBIT. I thrive on challenges across diverse domains.
       </p>
       <p className="sm:text-lg">
         Focused on web dev and Gen AI. Portfolio highlights innovation, while
         continuous learning fuels impactful tech contributions. Reach out
-        anytime for assistance or inquiries!
+        anytime for assistance or inquiriess
       </p>
       </div>
       <div className="flex flex-wrap gap-2 py-10">
