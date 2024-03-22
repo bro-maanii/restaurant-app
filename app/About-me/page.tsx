@@ -16,16 +16,20 @@ export default function page() {
     <div className="flex flex-col justify-center items-center ">
       <h1 className="text-2xl sm:text-5xl font-bold py-10">About Me</h1>
       <div className="text-center md:w-[500px]"> 
-      <p className="text-lg sm:text-xl font-bold">
-        I&apos;m Eman Ali Abbasi from Karachi&lsquo; also known as the City of Light. A
-        passionate Software Engineering student at the University of Karachi
-        -UBIT. I thrive on challenges across diverse domains.
-      </p>
-      <p className="sm:text-lg">
-        Focused on web dev and Gen AI. Portfolio highlights innovation, while
-        continuous learning fuels impactful tech contributions. Reach out
-        anytime for assistance or inquiriess
-      </p>
+      <p className="pb-7 px-2 text-lg ">
+              I&apos;m{" "}
+              <strong className="text-xl ">
+                Eman Ali Abbasi{" "}
+              </strong>{" "}
+              from Karachi, also known as the City of Light. A Third-year
+              Software Engineering student at the University of Karachi -UBIT, I
+              thrive on challenges across diverse domains.
+            </p>
+            <p className="text-lg">
+              Focused on web dev and Gen AI. Portfolio highlights innovation,
+              while continuous learning fuels impactful tech contributions.
+              Reach out anytime for assistance or inquiries!
+            </p>
       </div>
       <div className="flex flex-wrap gap-2 py-10">
             <Link
