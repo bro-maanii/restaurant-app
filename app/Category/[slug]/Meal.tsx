@@ -3,6 +3,10 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Heart } from "lucide-react";
 import { AiFillHeart } from "react-icons/ai";
+import { addfav, IFavorite } from "@/lib/features/AddtofavSlice";
+import { useDispatch } from "react-redux";
+import { Button } from "@/components/ui/button";
+import Notification from "@/app/UI-components/Notification";
 
 
 export default function Meal(props: {
@@ -10,27 +14,19 @@ export default function Meal(props: {
     strMeal: string;
     strMealThumb: string;
   }) {
-    const [isFavorite, setIsFavorite] = useState(false);
-  const [favMeals, setFavMeals] = useState<any[]>([]);
-  useEffect(() => {
-    const storedFavs = localStorage.getItem('favMeals');
-    if (storedFavs) {
-      setFavMeals(JSON.parse(storedFavs));
-    }
-  }, []); // Empty dependency array to run only on initial render
-
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+  
+  const dispatch=useDispatch()
   const handleToggleFavorite = () => {
-    setIsFavorite(!isFavorite);
     console.log(isFavorite);
-
-    const newFavMeals = isFavorite
-      ? [...favMeals, props.idMeal]
-      : favMeals.filter((id) => id !== props.idMeal);
-
-    setFavMeals(newFavMeals);
-    localStorage.setItem('favMeals', JSON.stringify(newFavMeals));
-  };
+    setShowNotification(true); // Show notification
+    setTimeout(() => setShowNotification(false), 5000)
+    dispatch(addfav({idMeal:props.idMeal,strMeal:props.strMeal,strMealThumb:props.strMealThumb }))
+    setIsFavorite(!isFavorite);
+  }
   return (
+    <>
           <div className="p-4 lg:w-1/4 md:w-1/2">
             <div className="h-full flex flex-col items-center text-center">
               <Image
@@ -45,19 +41,13 @@ export default function Meal(props: {
                   {props.strMeal}
                 </h2>
                 <div
-        className=""
-        onClick={handleToggleFavorite}
       >
-        {isFavorite ? (
-          <>
-            <AiFillHeart className="sm:mr-2 h-6 w-6 sm:h-8 sm:w-8 text-red-500 hover:h-9 hover:w-9 cursor-pointer " />
-          </>
-        ) : (
-          <Heart />
-        )}
+        <Button onClick={handleToggleFavorite} className="mt-4 bg-blue-500">Add to Favourites</Button>
       </div>
               </div>
             </div>
           </div>
+          <Notification showNotification={showNotification} />
+          </>
   );
 }
