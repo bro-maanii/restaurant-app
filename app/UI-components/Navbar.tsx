@@ -13,13 +13,13 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 bg-white  flex justify-between items-center  sm:px-20  py-8 px-3 shadow-md">
       <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={72}
-              height={16}
-              priority
-    />
+        src="/vercel.svg"
+        alt="Vercel Logo"
+        className="dark:invert"
+        width={72}
+        height={16}
+        priority
+      />
       <div>
         <ul className="hidden md:flex sm:gap-x-7 ">
           <li className="text-base hover:delay-100 hover:scale-110 hover:font-bold  ">
@@ -39,7 +39,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      
+
       <div onClick={handleNav} className="md:hidden">
         <Menu absoluteStrokeWidth />
       </div>
@@ -51,29 +51,38 @@ const Navbar = () => {
         }
       >
         <div className="grid grid-cols-1 gap-4">
-        
-        <div>
-          <ul className="flex relative h-screen flex-col justify-normal items-center gap-y-4 ">
-            <li className="text-base hover:delay-100 hover:scale-110 hover:font-bold  ">
-              <Link href="/" onClick={handleNav}>Home</Link>
-            </li>
-            <li className="text-base hover:delay-100 hover:scale-110 hover:font-bold ">
-              <Link href="/menu" onClick={handleNav}>Menu</Link>
-            </li>
-            <li className="text-base hover:delay-100 hover:scale-110 hover:font-bold active:font-semibold ">
-              <Link href="/Favourites" onClick={handleNav}>My Favourites</Link>
-            </li>
-            <li className="text-base hover:delay-100 hover:scale-110 hover:font-bold ">
-              <Link href="/Random-Meal" onClick={handleNav}>Random Meal</Link>
-            </li>
-            <li className="text-base absolute bottom-20 hover:delay-100 hover:scale-110 hover:font-bold  " onClick={handleNav}>
-              <Link href="/About-me">About Me</Link>
-            </li>
-          </ul>
+          <div>
+            <ul className="flex relative h-screen flex-col justify-normal items-center gap-y-4 ">
+              <li className="text-base hover:delay-100 hover:scale-110 hover:font-bold  ">
+                <Link href="/" onClick={handleNav}>
+                  Home
+                </Link>
+              </li>
+              <li className="text-base hover:delay-100 hover:scale-110 hover:font-bold ">
+                <Link href="/menu" onClick={handleNav}>
+                  Menu
+                </Link>
+              </li>
+              <li className="text-base hover:delay-100 hover:scale-110 hover:font-bold active:font-semibold ">
+                <Link href="/Favourites" onClick={handleNav}>
+                  My Favourites
+                </Link>
+              </li>
+              <li className="text-base hover:delay-100 hover:scale-110 hover:font-bold ">
+                <Link href="/Random-Meal" onClick={handleNav}>
+                  Random Meal
+                </Link>
+              </li>
+              <li
+                className="text-base absolute bottom-32 hover:delay-100 hover:scale-110 hover:font-bold  "
+                onClick={handleNav}
+              >
+                <Link href="/About-me">About Me</Link>
+              </li>
+            </ul>
+          </div>
         </div>
-        
       </div>
-    </div>
     </div>
   );
 };

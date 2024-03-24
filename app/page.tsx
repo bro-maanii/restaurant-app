@@ -49,7 +49,6 @@ export default function Home() {
               <Link href="/Random-Meal">
                 <Button className="w-full">Random Meal</Button>
               </Link>
-              
             </div>
           </div>
         </div>

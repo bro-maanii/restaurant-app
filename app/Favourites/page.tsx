@@ -12,7 +12,9 @@ export default function Page() {
 
   const handleRemovefav = (id: number, title: string, strMealThumb: string) => {
     // Dispatch action to remove from fav
-    dispatch(removefav({ idMeal: id, strMeal: title, strMealThumb: strMealThumb }));
+    dispatch(
+      removefav({ idMeal: id, strMeal: title, strMealThumb: strMealThumb })
+    );
   };
 
   // UI Doesn't match errror solve
@@ -22,12 +24,17 @@ export default function Page() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold flex justify-center py-4">Favourites</h1>
+      <h1 className="text-3xl font-bold flex justify-center py-4">
+        Favourites
+      </h1>
       <div className="flex justify-center align-middle">
         {favData.length !== 0 && domLoaded ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 justify-center align-middle px-4">
             {favData.map((item) => (
-              <div key={item.idMeal} className="flex flex-col justify-center align-middle sm:h-96">
+              <div
+                key={item.idMeal}
+                className="flex flex-col justify-center align-middle sm:h-96"
+              >
                 <Image
                   src={item.strMealThumb}
                   alt=""
@@ -35,7 +42,15 @@ export default function Page() {
                   height={300}
                 />
                 <h1 className="sm:text-sm text-xs">{item.strMeal}</h1>
-                <Button onClick={() => handleRemovefav(item.idMeal, item.strMeal, item.strMealThumb)}>
+                <Button
+                  onClick={() =>
+                    handleRemovefav(
+                      item.idMeal,
+                      item.strMeal,
+                      item.strMealThumb
+                    )
+                  }
+                >
                   Remove
                 </Button>
               </div>

@@ -35,13 +35,16 @@ export default async function page() {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
             {categoryData.map((category) => (
-                <Link key={category.idCategory} href={`/Category/${category.strCategory}`}>
-              <Category
-                idCategory={category.idCategory}
-                strCategory={category.strCategory}
-                strCategoryThumb={category.strCategoryThumb}
-                strCategoryDescription={category.strCategoryDescription}
-              />
+              <Link
+                key={category.idCategory}
+                href={`/Category/${category.strCategory}`}
+              >
+                <Category
+                  idCategory={category.idCategory}
+                  strCategory={category.strCategory}
+                  strCategoryThumb={category.strCategoryThumb}
+                  strCategoryDescription={category.strCategoryDescription}
+                />
               </Link>
             ))}
           </div>
