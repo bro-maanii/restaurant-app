@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font wapper">
       <div className="container px-5 py-24 mx-auto flex flex-wrap justify-center items-center">
         <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
           <Image

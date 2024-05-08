@@ -65,12 +65,40 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
- 
-@layer base {
-  * {
-    @apply border-border;
+
+.wapper {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media screen and (max-width: 1536px) {
+  .wapper {
+    max-width: 1366px;
   }
-  body {
-    @apply bg-background text-foreground;
+}
+@media screen and (max-width: 1366px) {
+  .wapper {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wapper {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wapper {
+    max-width: 375px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .wapper {
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }
