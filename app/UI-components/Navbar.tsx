@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 bg-white  flex justify-between items-center  sm:px-20  py-8 px-3 shadow-md">
+    <div className="bg-white  flex justify-between items-center  sm:px-20  py-8 px-3 shadow-sm">
       <Image
         src="/vercel.svg"
         alt="Vercel Logo"

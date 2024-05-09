@@ -7,7 +7,7 @@ export default function AboutUS() {
   return (
     <div className="flex flex-col  md:flex-row  gap-4  justify-center items-center">
       {/* left side */}
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 xl:w-auto">
         <Image
           alt="hero"
           className="object-cover object-center w-full"
