@@ -8,21 +8,21 @@ export default function Hero2() {
     <div className='flex justify-stretch align-middle items-center'>
         {/* left side */}
         <div className='w-1/2 '>
-            <div>
-            <h1 className='text-5xl sm:text-7xl md:text-8xl font-bold'>Food</h1>
-            <h1 className='text-5xl sm:text-7xl md:text-8xl font-bold'>Is</h1>
-            <h1 className='text-5xl sm:text-7xl md:text-8xl font-bold'>Life</h1>
+            <div className='flex flex-col justify-center align-middle items-center'>
+            <h1 className='text-5xl sm:text-7xl md:text-8xl  first-letter:text-white font-bold'>Food</h1>
+            <h1 className='text-5xl sm:text-7xl md:text-8xl first-letter:text-white font-bold'>Is</h1>
+            <h1 className='text-5xl sm:text-7xl md:text-8xl first-letter:text-white font-bold'>Life</h1>
             </div>
-            <div>
-                <Button className='mt-5' variant='outline'>Order Now</Button>
-                <Button className='mt-2' variant='outline'>Book Now</Button>
+            <div className='flex justify-around'>
+                <Button className='mt-5 text-lg hover:italic hover:bg-blue-600 bg-blue-500  text-black' >Order Now</Button>
+                <Button className='mt-5 text-lg hover:italic hover:bg-blue-600 bg-blue-500 text-black' >Book Now</Button>
             </div>
         </div>
         {/* right side */}
         <div className='w-1/2 '>
-            <Image alt='hero' className="object-cover object-center h-full w-full "
+            <Image alt='hero' className="object-cover object-center h-auto w-auto "
             width={460}
-            height={500}
+            height={400}
             src={heroImage} />
         </div>
     </div>

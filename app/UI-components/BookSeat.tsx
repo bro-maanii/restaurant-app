@@ -2,23 +2,23 @@ import React from "react";
 
 export default function BookSeat() {
   return (
-    <div className="text-gray-600 body-font ">
-      <div className="container px-5 py-24 mx-auto">
+    <div className="text-white body-font ">
+      <div className="container px-5 py-14 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          <h1 className="sm:text-5xl text-3xl font-extrabold title-font mb-4 text-white">
             Book a Seat
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-lg">
             Reserve your table by filling out the form below.
           </p>
         </div>
-        <div className="lg:w-1/2 md:w-2/3 mx-auto">
+        <div className="lg:w-1/2 md:w-2/3 mx-auto bg-white p-5">
           <div className="flex flex-wrap -m-2">
             <div className="p-2 w-full">
               <div className="">
                 <label
                   htmlFor="name"
-                  className="leading-7 text-sm text-gray-600"
+                  className="leading-7 text-lg font-bold text-red-600"
                 >
                   Name
                 </label>
@@ -26,7 +26,7 @@ export default function BookSeat() {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
@@ -34,7 +34,7 @@ export default function BookSeat() {
               <div className="">
                 <label
                   htmlFor="email"
-                  className="leading-7 text-sm text-gray-600"
+                  className="leading-7 text-lg font-bold text-red-600"
                 >
                   Email
                 </label>
@@ -42,7 +42,7 @@ export default function BookSeat() {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function BookSeat() {
               <div className="">
                 <label
                   htmlFor="phone"
-                  className="leading-7 text-sm text-gray-600"
+                  className="leading-7 text-lg font-bold text-red-600"
                 >
                   Phone Number
                 </label>
@@ -58,7 +58,7 @@ export default function BookSeat() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function BookSeat() {
               <div className="">
                 <label
                   htmlFor="date"
-                  className="leading-7 text-sm text-gray-600"
+                  className="leading-7 text-lg font-bold text-red-600"
                 >
                   Date
                 </label>
@@ -74,7 +74,7 @@ export default function BookSeat() {
                   type="date"
                   id="date"
                   name="date"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function BookSeat() {
               <div className="">
                 <label
                   htmlFor="time"
-                  className="leading-7 text-sm text-gray-600"
+                  className="leading-7 text-lg font-bold text-red-600"
                 >
                   Time
                 </label>
@@ -90,7 +90,7 @@ export default function BookSeat() {
                   type="time"
                   id="time"
                   name="time"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function BookSeat() {
               <div className="">
                 <label
                   htmlFor="partySize"
-                  className="leading-7 text-sm text-gray-600"
+                  className="leading-7 text-lg font-bold text-red-600"
                 >
                   Party Size
                 </label>
@@ -107,7 +107,7 @@ export default function BookSeat() {
                   id="partySize"
                   name="partySize"
                   min="1"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>

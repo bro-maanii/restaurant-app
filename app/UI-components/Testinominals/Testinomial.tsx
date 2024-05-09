@@ -24,6 +24,12 @@
       ];
       
     return (
+      <>
+      <div className='flex flex-col justify-center align-middle items-center py-4 sm:py-8 my-7'>
+        <h1 className="text-5xl font-bold text-center">Testinomials</h1>
+        <p className="text-center opacity-60">What our customers say about us</p>
+      </div>
       <FancyTestimonialsSlider testimonials={restaurantTestimonials} />
+      </>
     )
   }

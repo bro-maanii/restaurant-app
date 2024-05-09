@@ -5,6 +5,15 @@ import { CheckCircle } from "lucide-react";
 
 export default function AboutUS() {
   return (
+    <>
+    {/* main title */}
+    <div className="text-center py-5 pt-24">
+      <h1 className="text-3xl lg:text-5xl font-bold text-center opacity-40">
+        About Us
+      </h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo libero, unde fugit nostrum veritatis itaque iusto illo vero corrupti excepturi maiores maxime.</p>
+    </div>
+    {/* image and text */}
     <div className="flex flex-col  md:flex-row  gap-4  justify-center items-center">
       {/* left side */}
       <div className="w-full md:w-1/2 xl:w-auto">
@@ -62,5 +71,6 @@ export default function AboutUS() {
         </div>
       </div>
     </div>
+    </>
   );
 }
