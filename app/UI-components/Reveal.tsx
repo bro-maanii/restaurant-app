@@ -2,7 +2,7 @@
 import { motion, useAnimation, useInView } from 'framer-motion';
 import React, { useEffect, useRef } from 'react'
 
-export default function 
+export default function Reveal
 ({
     children,
   }: Readonly<{
