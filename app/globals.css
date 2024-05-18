@@ -79,13 +79,7 @@
   background-size: cover;
   background-position: center;
 }
-.team-bg{
-  background-image: url("../public/team-image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  
-}
+
 @media screen and (max-width: 1536px) {
   .wapper {
     max-width: 1366px;
