@@ -35,7 +35,7 @@ export default function Home() {
           <TestimonialPage />
         </Reveal>
       </div>
-      <div className="contact-bg my-8">
+      <div className=" my-8">
         <Reveal>
           <BookSeat />
         </Reveal>
