@@ -9,40 +9,37 @@ import TestimonialPage from "./UI-components/Testinominals/Testinomial";
 
 export default function Home() {
   return (
-    <><div className="wapper">
-      <Reveal>
-      
-        <Hero />
-      
-      </Reveal>
+    <>
+      <div className="wapper">
+        <Reveal>
+          <Hero />
+        </Reveal>
       </div>
       <div className="bg-red-800 py-5">
         <Reveal>
-        <Hero2 />
+          <Hero2 />
         </Reveal>
       </div>
       <div className="wapper">
         <Reveal>
-        <AboutUS />
+          <AboutUS />
         </Reveal>
       </div>
       <div className="bg-red-200 my-8">
         <Reveal>
-        <Team />
+          <Team />
         </Reveal>
-
       </div>
       <div className="wapper">
         <Reveal>
-        <TestimonialPage />  
+          <TestimonialPage />
         </Reveal>
       </div>
       <div className="contact-bg my-8">
         <Reveal>
-        <BookSeat />
+          <BookSeat />
         </Reveal>
       </div>
-      
     </>
   );
 }
