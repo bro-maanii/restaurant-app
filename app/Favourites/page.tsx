@@ -57,7 +57,7 @@ export default function Page() {
             ))}
           </div>
         ) : (
-          <p>Nothing to Do</p>
+          <p className="text-3xl font-bold text-center ">No Favourites</p>
         )}
       </div>
     </>

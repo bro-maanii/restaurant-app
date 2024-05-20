@@ -5,7 +5,9 @@ import Hero from "./UI-components/Hero";
 import Hero2 from "./UI-components/Hero2";
 import Reveal from "./UI-components/Reveal";
 import Team from "./UI-components/Team";
+import TeamSection from "./UI-components/TeamSection";
 import TestimonialPage from "./UI-components/Testinominals/Testinomial";
+import TestinomialSection from "./UI-components/Testinominals/TestinomialSection";
 
 export default function Home() {
   return (
@@ -16,25 +18,26 @@ export default function Home() {
         </Reveal>
       </div>
       <div className="bg-red-800 py-5">
-        <Reveal>
-          <Hero2 />
-        </Reveal>
+        <div className="wapper">
+          <Reveal>
+            <Hero2 />
+          </Reveal>
+        </div>
       </div>
-      <div className="wapper">
+      
+      <Reveal>
+        <AboutUS />
+      </Reveal>
+      
         <Reveal>
-          <AboutUS />
+          <TeamSection />
         </Reveal>
-      </div>
-      <div className="bg-red-200 my-8">
+      
+      
         <Reveal>
-          <Team />
+          <TestinomialSection />
         </Reveal>
-      </div>
-      <div className="wapper">
-        <Reveal>
-          <TestimonialPage />
-        </Reveal>
-      </div>
+      
       <div className=" my-8">
         <Reveal>
           <BookSeat />

@@ -73,13 +73,6 @@
   padding-left: 80px;
   padding-right: 80px;
 }
-.contact-bg{
-  background-image: url("../public/bg-image.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 @media screen and (max-width: 1536px) {
   .wapper {
     max-width: 1366px;
@@ -98,7 +91,7 @@
 }
 @media screen and (max-width: 768px) {
   .wapper {
-    max-width: 375px;
+    max-width: 100%;
     padding-left: 5px;
     padding-right: 5px;
   }

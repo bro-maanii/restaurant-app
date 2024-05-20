@@ -41,6 +41,7 @@ export default function BookSeat() {
                       type="text"
                       id="name"
                       name="name"
+                      placeholder="Full Name"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
@@ -57,6 +58,7 @@ export default function BookSeat() {
                       type="email"
                       id="email"
                       name="email"
+                      placeholder="Email Address"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
@@ -73,6 +75,7 @@ export default function BookSeat() {
                       type="tel"
                       id="phone"
                       name="phone"
+                      placeholder="Phone Number"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
@@ -89,6 +92,7 @@ export default function BookSeat() {
                       type="date"
                       id="date"
                       name="date"
+                      placeholder="Date of reservation"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
@@ -105,6 +109,7 @@ export default function BookSeat() {
                       type="time"
                       id="time"
                       name="time"
+                      placeholder="Timing of reservation"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
@@ -122,6 +127,7 @@ export default function BookSeat() {
                       id="partySize"
                       name="partySize"
                       min="1"
+                      placeholder="Number of people"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
