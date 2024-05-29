@@ -1,7 +1,48 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import contactBg from "../../public/bg-image.jpeg";
 
+
 export default function BookSeat() {
+  const dataSet = { name: '', email: '',phone_number:'',reservation_date:"", reservation_time:"", number_of_people:1 }
+  const [formData, setFormData] = useState(dataSet);
+
+    const handleChange = (e: any) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const createReservation = async () => {
+        const res = await fetch("http://localhost:8000/api/add_reservation", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                        name: formData.name,
+                        email: formData.email,
+                        phone_number: formData.phone_number,
+                        reservation_date:  formData.reservation_date,
+                        reservation_time: formData.reservation_time,
+                        number_of_people: formData.number_of_people
+                    })
+        })
+        if (res.ok) {
+            console.log('Task Created successfully!');
+            alert('Task Created successfully');
+            setFormData({
+                name: '',
+                email: '',
+                phone_number: '',
+                reservation_date: '',
+                reservation_time: '',
+                number_of_people: 1
+            })
+        } else {
+            alert('Failed to edit task:');
+            console.error('Failed to edit task:', res.status, res.statusText);
+        }
+    }
   return (
     <section className="relative w-full h-full flex items-center justify-center bg-gray-900">
       <img
@@ -30,7 +71,7 @@ export default function BookSeat() {
             <div className="lg:w-1/2 md:w-2/3 mx-auto bg-white p-5">
               <div className="flex flex-wrap -m-2">
                 <div className="p-2 w-full">
-                  <div className="">
+                  <div  className="">
                     <label
                       htmlFor="name"
                       className="leading-7 text-lg font-bold text-red-600"
@@ -38,9 +79,12 @@ export default function BookSeat() {
                       Name
                     </label>
                     <input
+                      onChange={handleChange}
+                      required
                       type="text"
                       id="name"
                       name="name"
+                      value={formData.name}
                       placeholder="Full Name"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
@@ -55,6 +99,9 @@ export default function BookSeat() {
                       Email
                     </label>
                     <input
+                      onChange={handleChange}
+                      required
+                      value={formData.email}
                       type="email"
                       id="email"
                       name="email"
@@ -66,15 +113,18 @@ export default function BookSeat() {
                 <div className="p-2 w-full">
                   <div className="">
                     <label
-                      htmlFor="phone"
+                      htmlFor="phone_number"
                       className="leading-7 text-lg font-bold text-red-600"
                     >
                       Phone Number
                     </label>
                     <input
+                      onChange={handleChange}
+                      required   
+                      value={formData.phone_number}  
                       type="tel"
-                      id="phone"
-                      name="phone"
+                      id="phone_number"
+                      name="phone_number"
                       placeholder="Phone Number"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
@@ -83,15 +133,18 @@ export default function BookSeat() {
                 <div className="p-2 w-full">
                   <div className="">
                     <label
-                      htmlFor="date"
+                      htmlFor="reservation_date"
                       className="leading-7 text-lg font-bold text-red-600"
                     >
                       Date
                     </label>
                     <input
-                      type="date"
-                      id="date"
-                      name="date"
+                      onChange={handleChange}
+                      required
+                      value={formData.reservation_date}
+                      type  ="date"
+                      id="reservation_date"
+                      name="reservation_date"
                       placeholder="Date of reservation"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
@@ -100,15 +153,18 @@ export default function BookSeat() {
                 <div className="p-2 w-full">
                   <div className="">
                     <label
-                      htmlFor="time"
+                      htmlFor="reservation_time"
                       className="leading-7 text-lg font-bold text-red-600"
                     >
                       Time
                     </label>
                     <input
+                      onChange={handleChange}
+                      required
+                      value={formData.reservation_time}
                       type="time"
-                      id="time"
-                      name="time"
+                      id="reservation_time"
+                      name="reservation_time"
                       placeholder="Timing of reservation"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
@@ -117,15 +173,18 @@ export default function BookSeat() {
                 <div className="p-2 w-full">
                   <div className="">
                     <label
-                      htmlFor="partySize"
+                      htmlFor="number_of_people"
                       className="leading-7 text-lg font-bold text-red-600"
                     >
-                      Party Size
+                      Party Seats
                     </label>
                     <input
-                      type="number"
-                      id="partySize"
-                      name="partySize"
+                      onChange={handleChange}
+                      required
+                      value={formData.number_of_people}
+                      type= 'number'
+                      id="number_of_people"
+                      name="number_of_people"
                       min="1"
                       placeholder="Number of people"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-black focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -133,7 +192,7 @@ export default function BookSeat() {
                   </div>
                 </div>
                 <div className="p-2 w-full">
-                  <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                  <button onClick={createReservation} className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                     Book Now
                   </button>
                 </div>
